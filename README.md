@@ -1,14 +1,25 @@
 # graphql-perf
 Gather performance information from GraphQL `resolve` methods and prepare JSON in Trace Event Format for Chrome Devtools Timeline tab.
+
 <img width="772" alt="screen shot 2016-11-05 at 9 51 50" src="https://cloud.githubusercontent.com/assets/1946920/20027396/b8c78a22-a33d-11e6-8aca-b70216ad5544.png">
 
 ### Current plans/aims/thoughts:
-- responsive graphics in Google Chrome, just click a link in browser console or press a button in extension (no need to setup special server or buy subscription [Apollo Optics](http://www.apollodata.com/optics). You will measure only current request. If you need aggregated statistics use Apollo Optics)
-- should work with any GraphQL Schema under nodejs, but if schema built with https://github.com/nodkz/graphql-compose-mongoose (and other `graphql-compose` libs) will have additional profiling info (should have api that allows other libs to provide extended perf metrics).
-- integration with `express-graphql` (but also should work with `apollo-server` and others)
-- integration with https://github.com/nodkz/react-relay-network-layer, want add link to console
-- perf data will be in the json-response from graphql server under `extensions.perf` path in it. So needs help in passing this data to devTools timeline (some link or chrome extension) or another way. 
-- maybe somebody writes for other languages similar perf export in Trace Event Format under **[extensions](https://github.com/graphql/express-graphql#providing-extensions).perf** path in graphql response.
+- VIEW: responsive timeline graphics in Google Chrome Devtools
+  - just click a link in browser console or press a button in extension
+  - you will measure only current request
+  - no need to setup special server or buy subscription [Apollo Optics](http://www.apollodata.com/optics) 
+  - if you need aggregated statistics use Apollo Optics)
+- NODEJS SERVER: should work with any GraphQL Schema under nodejs
+  - but if schema built with https://github.com/nodkz/graphql-compose-mongoose (and other `graphql-compose` libs) will have additional profiling info
+  - should have api that allows other libs to provide extended perf metrics
+  - will integrate it with `express-graphql` 
+  - but also may be integrated with `apollo-server` and others
+- CLIENT: should have link, button, extension that open 
+  - perf data will be in the json-response from graphql server under `extensions.perf` path in it. 
+  - will integrate it with https://github.com/nodkz/react-relay-network-layer
+  - so needs help in passing this data to devTools timeline (some link or chrome extension) or another way. 
+- OTHER SERVERS: 
+  - maybe somebody writes for other languages similar perf export in Trace Event Format under **[extensions](https://github.com/graphql/express-graphql#providing-extensions).perf** path in graphql response.
 
 **I'll try to start it at the end of November/December. Too much work right now.**
 

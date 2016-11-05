@@ -1,0 +1,90 @@
+{
+  "name": "graphql-perf",
+  "version": "0.0.1",
+  "description": "Gather performance information from GraphQL resolve methods and prepare JSON in Trace Event Format for Chrome Devtools Timeline",
+  "files": [
+    "es",
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "jsnext:main": "es/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/graphql-compose/graphql-perf.git"
+  },
+  "keywords": [
+    "graphql",
+    "performance",
+    "tracer",
+    "devtools",
+    "perf"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/graphql-compose/graphql-perf/issues"
+  },
+  "homepage": "https://github.com/graphql-compose/graphql-perf",
+  "peerDependencies": {
+    "graphql": ">=0.8.0"
+  },
+  "devDependencies": {
+    "babel-cli": "6.16.0",
+    "babel-core": "6.17.0",
+    "babel-eslint": "7.0.0",
+    "babel-plugin-syntax-async-functions": "6.13.0",
+    "babel-plugin-transform-class-properties": "6.16.0",
+    "babel-plugin-transform-flow-strip-types": "6.14.0",
+    "babel-plugin-transform-object-rest-spread": "6.16.0",
+    "babel-plugin-transform-regenerator": "6.16.1",
+    "babel-plugin-transform-runtime": "6.15.0",
+    "babel-preset-es2015": "6.16.0",
+    "chai": "3.5.0",
+    "chai-as-promised": "6.0.0",
+    "chai-spies": "0.7.1",
+    "cz-conventional-changelog": "^1.2.0",
+    "eslint": "3.7.1",
+    "eslint-config-airbnb": "12.0.0",
+    "eslint-plugin-flowtype": "2.19.0",
+    "eslint-plugin-import": "1.16.0",
+    "eslint-plugin-jsx-a11y": "2.2.2",
+    "eslint-plugin-react": "6.3.0",
+    "flow-bin": "0.33.0",
+    "mocha": "3.1.0",
+    "nyc": "8.3.0",
+    "rimraf": "2.5.4",
+    "sane": "1.4.1",
+    "semantic-release": "^4.3.5"
+  },
+  "dependencies": {
+    "babel-runtime": "6.11.6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "nyc": {
+    "exclude": [
+      "**/__mocks__/**",
+      "**/__tests__/**",
+      "resources",
+      "node_modules"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  },
+  "scripts": {
+    "build": "npm run build-cjs && npm run build-flow && npm run build-es",
+    "build-cjs": "rimraf lib && babel src --ignore __tests__,__mocks__ -d lib",
+    "build-es": "rimraf es && BABEL_ENV=es babel src --ignore __tests__,__mocks__ -d es",
+    "build-flow": "find ./src -name '*.js' -not -path '*/__*' | while read filepath; do cp $filepath `echo $filepath | sed 's/\\/src\\//\\/lib\\//g'`.flow; done",
+    "coverage": "nyc npm run test",
+    "lint": "eslint src test *.js",
+    "test": "babel-node ./node_modules/.bin/_mocha --compilers js:babel-core/register --reporter dot --require ./resources/mocha-bootload src/**/__tests__/**/*-test.js",
+    "watch": "babel-node ./resources/watch.js",
+    "link": "npm link graphql && npm link",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  }
+}

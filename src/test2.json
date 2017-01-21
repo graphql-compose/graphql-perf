@@ -1,0 +1,9 @@
+[
+{"cat":"cc,devtools","pid":14689,"tid":14752,"ts":172188271789,"ph":"B","name":"RasterTask","args":{}},
+{"cat":"cc,devtools","pid":14689,"tid":14752,"ts":172188282069,"ph":"B","name":"RasterTask","args":{}},
+{"cat":"cc,devtools","pid":14689,"tid":14752,"ts":172188284394,"ph":"E","name":"RasterTask","args":{}},
+{"cat":"cc,devtools","pid":14689,"tid":14752,"ts":172188284395,"ph":"B","name":"RasterTask","args":{}},
+{"cat":"cc,devtools","pid":14689,"tid":14752,"ts":172188285394,"ph":"E","name":"RasterTask","args":{}},
+{"cat":"cc,devtools","pid":14689,"tid":14752,"ts":172188289400,"ph":"E","name":"RasterTask","args":{}},
+{"cat":"__metadata","pid":14689,"tid":14752,"ts":0,"ph":"M","name":"thread_name","args":{"name":"CrRendererMain"}},
+]

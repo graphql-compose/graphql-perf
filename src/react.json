@@ -1,0 +1,16 @@
+[
+{"pid":90130,"tid":775,"ts":428786733248,"ph":"b","cat":"blink.user_timing","name":"Nod2","args":{},"id":"0xc10d12"},
+{"pid":90130,"tid":775,"ts":428786734083,"ph":"e","cat":"blink.user_timing","name":"Nod2","args":{},"id":"0xc10d12"},
+{"pid":90130,"tid":775,"ts":428786733248,"ph":"b","cat":"blink.user_timing","name":"SwipeableColumns [update]","args":{},"id":"0xc10d11"},
+{"pid":90130,"tid":775,"ts":428786733283,"ph":"b","cat":"blink.user_timing","name":"SwipeableColumns [render]","args":{},"id":"0x36debe"},
+{"pid":90130,"tid":775,"ts":428786733403,"ph":"e","cat":"blink.user_timing","name":"SwipeableColumns [render]","args":{},"id":"0x36debe"},
+{"pid":90130,"tid":775,"ts":428786733523,"ph":"b","cat":"blink.user_timing","name":"Motion [update]","args":{},"id":"0x643291"},
+{"pid":90130,"tid":775,"ts":428786733538,"ph":"b","cat":"blink.user_timing","name":"Motion [componentWillReceiveProps]","args":{},"id":"0x781275"},
+{"pid":90130,"tid":775,"ts":428786733813,"ph":"e","cat":"blink.user_timing","name":"Motion [componentWillReceiveProps]","args":{},"id":"0x781275"},
+{"pid":90130,"tid":775,"ts":428786734048,"ph":"e","cat":"blink.user_timing","name":"Motion [update]","args":{},"id":"0x643291"},
+{"pid":90130,"tid":775,"ts":428786734083,"ph":"e","cat":"blink.user_timing","name":"SwipeableColumns [update]","args":{},"id":"0xc10d11"},
+
+{"pid":90130,"tid":775,"ts":428786733248,"ph":"X","cat":"blink.user_timing","name":"See User Timing for details","args":{},"dur":830},
+
+{"pid":90130,"tid":775,"ts":0,"ph":"M","cat":"__metadata","name":"thread_name","args":{"name":"CrRendererMain"}},
+]
